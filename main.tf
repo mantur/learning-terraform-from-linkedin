@@ -59,14 +59,14 @@ module "alb" {
     bucket = "blog-alb-logs"
   }
 
-  listeners = {
+  listeners = [
     http-listener = {
       port               = 80
       protocol           = "HTTP"
       target_group_index = 0      
     }
 
-  }
+  ]
 
   target_groups = {
     blog-instance = {
